@@ -1,1 +1,71 @@
-<div></div>
+<div class="container">
+  <div class="header">
+    <img ngSrc="assets/images/Phasmophobia_Logo.webp"
+         [alt]="title()"
+         height="54"
+         width="253"
+         priority>
+  </div>
+
+  <div class="main-panel">
+    <div class="equipment-container">
+      @for (e of equipment; track e.name) {
+        <div class="equipment">
+          <h2>{{ e.name }}</h2>
+          <div class="tiers">
+            <h4>Tiers: </h4>
+            <mat-button-toggle-group multiple>
+              <mat-button-toggle value="t1"
+                                 [checked]="e.selectedTiers.includes(1)"
+                                 (click)="handleTierToggled(e, 1)">
+                Tier 1
+              </mat-button-toggle>
+              <mat-button-toggle value="t2"
+                                 [checked]="e.selectedTiers.includes(2)"
+                                 (click)="handleTierToggled(e, 2)">
+                Tier 2
+              </mat-button-toggle>
+              <mat-button-toggle value="t3"
+                                 [checked]="e.selectedTiers.includes(3)"
+                                 (click)="handleTierToggled(e, 3)">
+                Tier 3
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="button-group">
+      <button matButton="tonal"
+              [class.disabled]="randomized"
+              [disabled]="randomized"
+              (click)="randomize()">
+        Randomize
+      </button>
+
+      <button matButton="tonal"
+              [class.disabled]="!randomized"
+              [disabled]="!randomized"
+              (click)="reset()">
+        Reset
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- The following code was taken from https://codepen.io/Ravyre/pen/gXawyY -->
+<div class="fogwrapper">
+  <div id="foglayer_01" class="fog">
+    <div class="image01"></div>
+    <div class="image02"></div>
+  </div>
+  <div id="foglayer_02" class="fog">
+    <div class="image01"></div>
+    <div class="image02"></div>
+  </div>
+  <div id="foglayer_03" class="fog">
+    <div class="image01"></div>
+    <div class="image02"></div>
+  </div>
+</div>

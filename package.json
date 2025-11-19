@@ -6,20 +6,9 @@
     "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:PhasmoRandomizer": "node dist/PhasmoRandomizer/server/server.mjs"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "jest"
   },
   "private": true,
   "dependencies": {
@@ -32,7 +21,6 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
-    "@angular/ssr": "^20.3.10",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -41,7 +29,10 @@
     "@angular/build": "^20.3.10",
     "@angular/cli": "^20.3.10",
     "@angular/compiler-cli": "^20.3.0",
+    "@eslint/js": "^9.39.1",
+    "@types/angular-material": "^1.1.78",
     "@types/express": "^5.0.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.17.19",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
@@ -50,8 +41,11 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jest": "^29.1.0",
     "eslint-plugin-unused-imports": "^4.3.0",
+    "globals": "^16.5.0",
     "jest": "^30.2.0",
+    "jiti": "^2.6.1",
     "ts-jest": "^29.4.5",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.47.0"
   }
 }

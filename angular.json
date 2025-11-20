@@ -26,7 +26,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "outputPath": "/docs"
+            "outputPath": {
+              "base": "docs",
+              "browser": ""
+            }
           },
           "configurations": {
             "production": {

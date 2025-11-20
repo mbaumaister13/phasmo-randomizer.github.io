@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build --base-href /RandomPhasmo/src/",
+    "build": "ng build --base-href /RandomPhasmo/",
     "watch": "ng build --watch --configuration development",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

@@ -10,24 +10,36 @@
           <div class="equipment">
             <h2>{{ e.name }}</h2>
             <div class="tiers">
-              <h3>Tiers: </h3>
-              <mat-button-toggle-group multiple>
-                <mat-button-toggle value="t1"
-                                   [checked]="e.selectedTiers.includes(1)"
-                                   (click)="handleTierToggled(e, 1)">
-                  Tier 1
-                </mat-button-toggle>
-                <mat-button-toggle value="t2"
-                                   [checked]="e.selectedTiers.includes(2)"
-                                   (click)="handleTierToggled(e, 2)">
-                  Tier 2
-                </mat-button-toggle>
-                <mat-button-toggle value="t3"
-                                   [checked]="e.selectedTiers.includes(3)"
-                                   (click)="handleTierToggled(e, 3)">
-                  Tier 3
-                </mat-button-toggle>
-              </mat-button-toggle-group>
+              <div class="tier-container t1" (click)="handleTierToggled(e, 1)">
+                @if (e.selectedTiers.includes(1)) {
+                  <h1>&#10003;</h1>
+                }
+                <img class="output-image"
+                     ngSrc="./assets/images/items/{{ e.imgPath }}/T1.webp"
+                     alt="{{ e.name }} Tier 1"
+                     height="500"
+                     width="500">
+              </div>
+              <div class="tier-container t2" (click)="handleTierToggled(e, 2)">
+                @if (e.selectedTiers.includes(2)) {
+                  <h1>&#10003;</h1>
+                }
+                <img class="output-image"
+                     ngSrc="./assets/images/items/{{ e.imgPath }}/T2.webp"
+                     alt="{{ e.name }} Tier 2"
+                     height="500"
+                     width="500">
+              </div>
+              <div class="tier-container t3" (click)="handleTierToggled(e, 3)">
+                @if (e.selectedTiers.includes(3)) {
+                  <h1>&#10003;</h1>
+                }
+                <img class="output-image"
+                     ngSrc="./assets/images/items/{{ e.imgPath }}/T3.webp"
+                     alt="{{ e.name }} Tier 3"
+                     height="500"
+                     width="500">
+              </div>
             </div>
           </div>
         }

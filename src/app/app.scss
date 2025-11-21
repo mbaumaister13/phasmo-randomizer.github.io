@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 .container {
   display: flex;
@@ -48,7 +48,7 @@
         justify-content: space-between;
         margin-left: 15%;
         margin-right: 15%;
-        height: 64px;
+        height: 72px;
         width: 50%;
 
         h1 {
@@ -100,28 +100,33 @@
           }
         }
 
-        .amount {
-          height: 64px;
-          width: 96px;
+        .amount-container {
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: start;
 
-          h2 {
-            font-family: Phasmo Title, serif;
-            letter-spacing: 2px;
-          }
-
-          h3 {
-            margin: 0;
-          }
-
-          .amount-stepper {
-            height: 40px;
+          .amount {
+            height: 64px;
+            width: 96px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: start;
+
+            h2 {
+              font-family: Phasmo Title, serif;
+              letter-spacing: 2px;
+            }
+
+            h3 {
+              margin: 0;
+            }
+
+            .amount-stepper {
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
       }
@@ -154,6 +159,11 @@
           }
         }
       }
+
+      .equipment:not(:last-child),
+      .output:not(:last-child) {
+        border-bottom: #FFFFFFBB 1px solid;
+      }
     }
 
     .button-group {
@@ -169,7 +179,7 @@
       }
 
       button.disabled {
-        color: #ffffff55;
+        color: #FFFFFF55;
       }
     }
   }
@@ -178,7 +188,77 @@
     position: absolute;
     bottom: 0;
     z-index: 1000;
-    font-family: "Droid Sans", serif;
+    font-family: 'Droid Sans', serif;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  h1 {
+    font-size: large !important;
+  }
+
+  h2 {
+    font-size: medium !important;
+  }
+
+  .equipment-container {
+    align-items: center !important;
+
+    .equipment {
+      align-items: center !important;
+      justify-content: start !important;
+      flex-direction: column !important;
+      margin-left: 5% !important;
+      margin-right: 5% !important;
+      height: unset !important;
+
+      h1 {
+        text-align: center !important;
+        width: unset !important;
+      }
+
+      .tiers {
+        width: unset !important;
+      }
+
+      .amount-container {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .output {
+      margin-left: 5% !important;
+      margin-right: 5% !important;
+      min-height: 72px !important;
+      height: 72px !important;
+      width: 80% !important;
+
+      h1 {
+        font-size: medium !important;
+      }
+
+      .output-image {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .button-group {
+    height: 10% !important;
+    margin-top: 0 !important;
+    padding-bottom: 16px !important;
+
+    button {
+      transform: scale(100%) !important;
+      margin: 32px 16px !important;
+    }
+  }
+
+  .disclaimer {
+    font-size: x-small !important;
+    text-align: center;
+    margin: 0 32px 8px !important;
   }
 }
 
@@ -187,58 +267,58 @@
     color: white;
   }
   2% {
-    color: #ffffffcc;
+    color: #FFFFFFCC;
   }
   2.5% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   3.25% {
-    color: #ffffff77;
+    color: #FFFFFF77;
   }
   3.75% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   4% {
-    color: #ffffffee;
+    color: #FFFFFFEE;
   }
   4.25% {
-    color: #ffffffaa;
+    color: #FFFFFFAA;
   }
   4.5% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
   5% {
-    color: #ffffff88;
+    color: #FFFFFF88;
   }
   5.25% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
   50.5% {
-    color: #ffffffcc;
+    color: #FFFFFFCC;
   }
   51% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   51.5% {
-    color: #ffffffee;
+    color: #FFFFFFEE;
   }
   52.5% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   53% {
-    color: #ffffffdd;
+    color: #FFFFFFDD;
   }
   54% {
-    color: #ffffffaa;
+    color: #FFFFFFAA;
   }
   55% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
   55.5% {
-    color: #ffffff66;
+    color: #FFFFFF66;
   }
   56% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
 }
 

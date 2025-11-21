@@ -52,32 +52,38 @@
               </div>
             </div>
 
-            <div class="amount">
-              <h3>Min</h3>
-              <div class="amount-stepper">
-                <button matIconButton (click)="decrementMin(e)">
-                  <mat-icon>remove</mat-icon>
-                </button>
-                <h2>{{ e.currentMinAmount }}</h2>
-                <button matIconButton (click)="incrementMin(e)">
-                  <mat-icon>add</mat-icon>
-                </button>
+            <div class="amount-container">
+              <div class="amount">
+                <h3>Min</h3>
+                <div class="amount-stepper">
+                  <button matIconButton (click)="decrementMin(e)">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                  <h2>{{ e.currentMinAmount }}</h2>
+                  <button matIconButton (click)="incrementMin(e)">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="amount">
-              <h3>Max</h3>
-              <div class="amount-stepper">
-                <button matIconButton (click)="decrementMax(e)">
-                  <mat-icon>remove</mat-icon>
-                </button>
-                <h2>{{ e.currentMaxAmount }}</h2>
-                <button matIconButton (click)="incrementMax(e)">
-                  <mat-icon>add</mat-icon>
-                </button>
+              <div class="amount">
+                <h3>Max</h3>
+                <div class="amount-stepper">
+                  <button matIconButton (click)="decrementMax(e)">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                  <h2>{{ e.currentMaxAmount }}</h2>
+                  <button matIconButton (click)="incrementMax(e)">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+
+          @if ($index !== equipment.length - 1) {
+            <mat-divider [inset]="true"></mat-divider>
+          }
         }
       } @else {
         @for (o of output; track o.name) {

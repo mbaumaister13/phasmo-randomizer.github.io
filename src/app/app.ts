@@ -3,6 +3,7 @@ import { EQUIPMENT, Equipment, ResultingEquipment, Tier } from './const/equipmen
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { NgOptimizedImage } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
+import { MatDivider } from '@angular/material/list';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { MatIcon } from '@angular/material/icon';
     MatButton,
     NgOptimizedImage,
     MatIconButton,
-    MatIcon
+    MatIcon,
+    MatDivider
   ],
   styleUrl: './app.scss'
 })

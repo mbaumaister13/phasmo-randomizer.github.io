@@ -1,8 +1,4 @@
-@use "sass:color";
-
-mat-divider {
-  color: white;
-}
+@use 'sass:color';
 
 .container {
   display: flex;
@@ -166,7 +162,7 @@ mat-divider {
 
       .equipment:not(:last-child),
       .output:not(:last-child) {
-        border-bottom: #ffffffbb 1px solid;
+        border-bottom: #FFFFFFBB 1px solid;
       }
     }
 
@@ -183,7 +179,7 @@ mat-divider {
       }
 
       button.disabled {
-        color: #ffffff55;
+        color: #FFFFFF55;
       }
     }
   }
@@ -192,7 +188,7 @@ mat-divider {
     position: absolute;
     bottom: 0;
     z-index: 1000;
-    font-family: "Droid Sans", serif;
+    font-family: 'Droid Sans', serif;
   }
 }
 
@@ -271,58 +267,58 @@ mat-divider {
     color: white;
   }
   2% {
-    color: #ffffffcc;
+    color: #FFFFFFCC;
   }
   2.5% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   3.25% {
-    color: #ffffff77;
+    color: #FFFFFF77;
   }
   3.75% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   4% {
-    color: #ffffffee;
+    color: #FFFFFFEE;
   }
   4.25% {
-    color: #ffffffaa;
+    color: #FFFFFFAA;
   }
   4.5% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
   5% {
-    color: #ffffff88;
+    color: #FFFFFF88;
   }
   5.25% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
   50.5% {
-    color: #ffffffcc;
+    color: #FFFFFFCC;
   }
   51% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   51.5% {
-    color: #ffffffee;
+    color: #FFFFFFEE;
   }
   52.5% {
-    color: #ffffff99;
+    color: #FFFFFF99;
   }
   53% {
-    color: #ffffffdd;
+    color: #FFFFFFDD;
   }
   54% {
-    color: #ffffffaa;
+    color: #FFFFFFAA;
   }
   55% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
   55.5% {
-    color: #ffffff66;
+    color: #FFFFFF66;
   }
   56% {
-    color: #ffffffbb;
+    color: #FFFFFFBB;
   }
 }
 
